@@ -3,9 +3,6 @@
     <PrimeAvatar shape="circle" size="xlarge" :image="resource.ImageUrl" />
     <div class="flex justify-content-evenly align-items-start flex-column ml-4">
       <div class="text-xl">{{resource.Title}}</div>
-      <div>
-        {{resource.Categories}}
-      </div>
     </div>
   </div>
 </template>

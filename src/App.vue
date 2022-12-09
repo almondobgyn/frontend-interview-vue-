@@ -1,11 +1,14 @@
 <template>
   <h1>Search Health.gov</h1>
-  <div class="container">
-    <div class="p-inputgroup">
-      <PrimeButton label="Search" :loading="loading" @click="runSearch" />
-      <InputText v-model="query" placeholder="Keyword" />
+  <div class="grid">
+    <div class="col-6 col-offset-3">
+      <div class="p-inputgroup">
+        <PrimeButton label="Search" :loading="false" @click="runSearch" />
+        <InputText v-model="query" placeholder="Keyword" />
+      </div>
+
+      <!-- Results here -->
     </div>
-    <!-- Results here -->
   </div>
 </template>
 
@@ -13,12 +16,9 @@
 
 export default {
   name: 'App',
-  components: {},
   data() { 
     return {
       query: '',
-      loading: false,
-      data: []
     }
   },
   methods: {
@@ -37,8 +37,4 @@ export default {
   margin-top: 60px;
 }
 
-.container {
-  width: 60%;
-  margin: 0 auto;
-}
 </style>
