@@ -1,15 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Search Health.gov</h1>
+  <div class="container">
+    <div class="p-inputgroup">
+      <PrimeButton label="Search" :loading="loading" @click="runSearch" />
+      <InputText v-model="query" placeholder="Keyword" />
+    </div>
+    <!-- Results here -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {},
+  data() { 
+    return {
+      query: '',
+      loading: false,
+      data: []
+    }
+  },
+  methods: {
+    runSearch() {}
   }
 }
 </script>
@@ -22,5 +35,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
 }
 </style>
